@@ -30,7 +30,23 @@ public class Main {
 	        if (vastaus.equals("b")) {
                 System.out.println("Paljonko talletat?");
                 int pano = input.nextInt();
-                tili += pano;
+
+
+                if(pano<0) {
+                        System.out.println("lukusi on negatiivinen");
+                        pano = 0;
+                    }
+
+
+
+
+
+
+
+                Main tulo = new Main();
+
+                int result = tulo.laskeTalletus(tili, pano);
+                tili += result;
                 System.out.println("Kiitos talletuksestasi!");
 
 
@@ -73,6 +89,10 @@ public class Main {
         }
 
 
+    }
+    int laskeTalletus(int a, int b) {
+        int sum = a += b;
+        return sum;
     }
 
 }
